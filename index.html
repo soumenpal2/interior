@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image with Overlay</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GeoManist:wght@300;400;500;600;700&display=swap">
+  <style>
+body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background-color: #F4F4F4!important;
+font-family: 'GeoManist'
+
+}
+
+.container-fluid{
+  padding:0!important;
+  margin:0!important;
+}
+
+    .overlay {
+  position: absolute;
+  top: 20%; 
+  left: 15%; 
+  padding: 20px; 
+  color: #29282B;
+}
+
+
+.button {
+  margin-top: 30px!important;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #007bff, #ff0000);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top:20px!important ;
+}
+    .button:hover {
+     color: #bec9d4;
+    }
+    .logo{
+        width:100px;
+        height:auto;
+    }
+    .logo img{
+        width:100%;
+        height:auto;
+    }
+ 
+   
+    .header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  position: absolute;
+  top: 30px; 
+  left: 50px; 
+  right: 50px; 
+  z-index: 999999;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.navigation a {
+  margin-right: 20px;
+  color:#777B7C ;
+}
+
+
+.small-images-container {
+  width: 70%;
+  height:auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.another-images-container {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-images-container img {
+  max-width: 100%;
+  height:90%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.another-images-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.gradient-text {
+  color:#F81E8F
+ 
+}
+
+.gradient-text-inner {
+ 
+color: #6989B5;
+}
+
+.Submit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-image: linear-gradient(to bottom right, #7DA42C, #F9B00A);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-image 0.3s;
+}
+
+.overlay p::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #D73A5D;
+    margin-top: 25px; 
+    margin-bottom: 25px;
+  
+}
+
+.Submit:hover {
+    background-image: linear-gradient(to bottom right, #e52e71, #ff8a00);
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="position-relative">
+      <!-- Header Section -->
+      <div class="header-section">
+        <div class="logo">
+          <img src="images\Home page - TEST FILE (15).png" alt="Logo">
+        </div>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#" class="dropdown">services ▼</a>
+  <div class="dropdown-menu">
+    <a href="#">Service 1</a>
+    <a href="#">Service 2</a>
+    <a href="#">Service 3</a>
+  </div>
+          <a href="#">Faq</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="additional-info">
+          <a href="https://api.whatsapp.com/send?phone=1234567890" target="_blank">
+            <i class="fab fa-whatsapp" style="color: white;font-size:18px;"></i>
+          </a>
+          <span style="color: white;margin-right: 150px;">123-456-7890</span>
+        </div>
+
+      </div>
+
+
+
+
+      </div>
+  
+      <img src="images\Home page - TEST FILE (17).png" class="img-fluid main-img" alt="Your Image">
+  
+      <div class="small-images-container">
+        <img src="images\Home page - TEST FILE03.png" class="small-image" alt="Small Image">
+      </div>
+      <div class="another-images-container">
+        <img src="images\Home page - TEST FILE (16).png" class="another-image" alt="Small Image">
+     
+      </div>
+
+      <div class="overlay">
+        <h2 style="font-size: 50px;">May Your <b>house</b> <br>be your canves</h2>
+        <p style="color:#67686A; font-size: 20px;">The best interior design company in kolkata</p>
+        
+        <a href="#" class="button">book consultation</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- form section -->
+
+
+<div class="container center-container">
+  <div class="row">
+    <div class="col-md-3 left-column">
+      <p><span class="gradient-text">Meet <span class="gradient-text-inner">Artflair</span></span></p>
+
+    <h2>Book <b>Free</b> consultation</h2>
+    </div>
+    <div class="col-md-6 middle-column">
+
+
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput1"></label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput1"></label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
+        </div>
+      </div>
+    </div>
+
+
+      <div class="row">
+        
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput1"></label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your Number">
+        </div>
+      </div>
+<div class="col-md-6">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1"></label>
+
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="enter current city">
+        </div>
+      </div>
+    </div>
+
+      </form>
+
+      <div class="form-check" style="padding-bottom: 10px;">
+        <input class="form-check-input" type="checkbox" id="agreeCheckbox">
+        <label class="form-check-label" for="agreeCheckbox">
+          I agree to the <span><a href="">terms and conditions</a></span>
+        </label>
+  </div>
+    </div>
+    
+    <div class="col-md-3 right-column">
+      <button class="Submit">Submit</button>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .left-column {
+    background-color: #ffffff; 
+  }
+  .middle-column {
+    background-color: #ffffff; 
+  }
+  .right-column {
+    background-color: #ffffff; 
+  }
+
+  .center-container{
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+  margin-top: -100px;
+  margin-bottom: 50px;
+  border-radius: 10px!important;
+  }
+
+</style>
+
+
+<!-- 2nd section -->
+
+
+
+<div class="container-fluid custom-container">
+  <div class="row">
+    <div class="col-5 col-custom-1">
+  <div class="text" style="text-align: left; margin-left: 150px;">   
+ <p><span style="color:#D97FB9 ;">A Few </span> <span style="color:#6989A8 ;">Words</span></p>     
+<h2 style=" letter-spacing: 5px; font-size: 40px;">Welcome to <br><b>Artflare</b></h2>
+</div> 
+<img src="images\Home page - TEST FILE (10).png" class="img-fluid fst-img" alt="Image">
+    </div>
+
+
+
+
+    <div class="col-3 col-custom-2" style="background-color: #6989A8;">
+      
+      <div class="row">
+        <div class="col-12">
+          <img src="images\Home page - TEST FILE (11).png" class="img-fluid" alt="Image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3>Why your space need colors</h3>
+          <p><b>colors have the power to shift the mood,tone and emotions of your surrounds</b></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididure magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, debitis.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-3 col-custom-2">
+    
+      <!-- Bottom section with text and paragraph -->
+      <div class="row">
+        <div class="col-12">
+          <h3>Where we brings color to life</h3>
+          <p><b>Experience the best home painting service in kolkata</b></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, doloremque.</p>
+        </div>
+      </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <img src="images\Home page - TEST FILE (12).png" class="img-fluid" alt="Image">
+    </div>
+  </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+
+.custom-container {
+  
+      padding: 50px;
+     
+    }
+ 
+
+.fst-img{
+  padding-top: 50px;
+  width:50%;
+  height:auto;
+}
+
+
+
+</style>
+
+
+<!-- 3rd section -->
+
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col">
+      <div class="overlay-container">
+        <img src="images\Home page - TEST FILE (9).png" class="img-fluid img-fluid-100" alt="Image">
+        <div class="overlay-content" style="color: white;">
+          <p style="font-size: 20px;"><span style="color:#D97FB9 ;">Contact </span> <span style="color:#6989A8 ;">Us</span></p>  
+          <h1 style="letter-spacing: 2px;">Plese <b>call us</b> to<br> get an ultimate<br> <b>Home solution</b></h1>
+          
+          <button class="call_btn">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+            <span style="padding-left:10px ;">call us At :+123456789</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .overlay-container {
+      position: relative;
+      display: inline-block;
+    }
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(0, -50%);
+      padding: 20px;
+      text-align: left;
+    }
+    .overlay-button {
+      margin-top: 20px;
+    }
+    .img-fluid-100 {
+      width: 100%;
+    }
+
+    .call_btn {
+    padding: 10px 25px;
+    background: linear-gradient(45deg, #FFB305, #6EA32D);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .call_btn:hover {
+    background-color: #128c7e; 
+  }
+
+  .whatsapp-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+
+
+
+</style>
+
+<!-- 
+4th section -->
+
+<div class="container" style="margin-top: 100px;">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card" style="height:350px;" ;>
+        <div class="card-body">
+          <p style="font-size: 18px;"><span style="color:#D97FB9 ;">Our </span> <span style="color:#6989A8 ;">Services</span></p>  
+          <h5 class="card-title">Best <b>indoor</b><br> <b>home painting</b> service <br>in <b>kolkata</b></h5>
+          <p class="card-text">Every wall has a story that is what we believe as artflare. Our indoor painting service are dedicated to creating a unified blend of your style and personalities within the boundaries of your home.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE (2).png') ;background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: white;">Ceiling Painting</h5>
+          <p class="card-text" style="color: white;">Being the leading house painter in kolkata,we never miss out on the details</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE.png'); background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="position: absolute;bottom: 20px; color: white;">Interior wall painting</h5>
+         
+          <div class="upper-arrow" style="position: absolute;bottom: -20px; right: 20px ; font-size: 24px; color: white; z-index: 999;color: #C59C35;">&#8593;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+   
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE (18).png'); background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="position: absolute;bottom: 20px; color: white;">Trims & moldings</h5>
+      
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE (14).png'); background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="position: absolute;bottom: 20px; color: white;">Texture & Faux finish painting</h5>
+        
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE (4).png'); background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="position: absolute;bottom: 20px; color: white;">Exterior wall painting</h5>
+        
+         
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE (5).png'); background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="position: absolute;bottom: 20px; color: white;">Gate & fance paintings</h5>
+          
+         
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE (13).png'); background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="position: absolute;bottom: 20px; color: white;">Deck & patio paintings</h5>
+          
+         
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="cards" style="background-image: url('images/Home page - TEST FILE (6).png'); background-size: cover; background-position: center; padding: 0;height:350px;">
+        <div class="card-body">
+          <h5 class="card-title" style="position: absolute;bottom: 20px; color: white;">weatherproof & sealing</h5>
+       
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+<!-- 5th section -->
+
+<style>
+
+.row1 {
+ 
+  margin: 8px 50px;
+}
+
+.row1,
+.row1 > .column1 {
+  padding: 10px;
+}
+
+.column1 {
+  float: left;
+  width: calc(50% - 10px);
+  display: none; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content1 img{
+width:100%;
+height:auto;
+}
+
+
+.show {
+  display: block;
+}
+
+.btn1 {
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  background-color:#B1AA1A;
+  cursor: pointer;
+  border-radius:5px;
+  color: white;
+  
+}
+.btn1:first-child{
+   margin-left:72px;
+}
+
+
+  .input-with-dropdown {
+    position: absolute;
+    right:100px;
+    display: inline-block;
+    width: 200px; 
+    
+  }
+
+  .input-with-dropdown input[type="text"] {
+    width: 100%;
+    padding-right: 30px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1 px solid black;
+  }
+
+  .input-with-dropdown .dropdown-sign {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none; 
+  }
+
+  .input-with-dropdown .dropdown-sign::after {
+    content: "\25BC"; 
+  }
+  .contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+
+
+<body>
+ <!-- portfolio section -->
+<div class="full_container" style="background-color: #F3EBDE;">
+  <div class="contain">
+     <div class="all_text" style="margin-left: 80px;">
+    <p style="font-size: 18px;"><span style="color:#D97FB9 ;">Our </span> <span style="color:#6989A8 ;">Projects</span></p>  
+      <h1>Projects we have <b>Done</b> </h1>
+      <p style="font-size: 15px;">customize your home with luxuary and love from the most affordable interior design studio in kolkata </p>
+    </div> 
+    <a href="#" class="button"style="margin-right: 80px;">View all projects</a>
+
+  </div> 
+
+  <div id="myBtnContainer" style="margin-left: 10px;">
+      <button class="btn1 active" onclick="filterSelection('all')">All</button>
+      <button class="btn1" onclick="filterSelection('indoor')"> indoor painting</button>
+      <button class="btn1" onclick="filterSelection('outdoor')"> outdoor painting</button>
+ 
+    </div>
+    <hr>
+    <h3 style="margin-left: 80px; display: inline-block;">Indoor Painting </h3>
+
+    <div class="input-with-dropdown">
+      <input type="text" placeholder="Interior wall painting">
+      <div class="dropdown-sign"></div>
+    </div>
+
+    <!-- Portfolio Gallery Grid -->
+    <div class="row1">
+
+      <div class="column1 outdoor">
+        <div class="content1">
+        <div class="image1" onclick="openImage('images/Home page - TEST FILE (8).png')">
+          <img src=" images\Home page - TEST FILE (8).png" alt="Mountains" style="width:100%">
+          </div>
+        
+        </div>
+      </div>
+
+     
+      <div class="column1 indoor">
+        <div class="content1">
+        <div class="image1" onclick="openImage('images/Home page - TEST FILE (19).png')">
+          <img src="images\Home page - TEST FILE (19).png" alt="Lights" style="width:100%">
+          </div>
+       
+        </div>
+      </div>
+
+
+      <div class="column1 outdoor">
+        <div class="content1">
+         <div class="image1" onclick="openImage('images\Home page - TEST FILE (20).png')">
+          <img src="images\Home page - TEST FILE (20).png" alt="Nature" style="width:100%">
+          </div>
+         
+        </div>
+      </div>
+
+     <div class="column1 indoor">
+        <div class="content1">
+        <div class="image1" onclick="openImage('images\Home page - TEST FILE (21).png')">
+          <img src="images\Home page - TEST FILE (21).png" alt="Car" style="width:100%">
+          </div>
+          
+        </div>
+      </div>
+    
+    <!-- END GRID -->
+  </div>
+
+<!-- //  script for portfolio -->
+<script>
+
+filterSelection("all") 
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column1");
+  if (c == "all") c = "";
+ 
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn1");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
